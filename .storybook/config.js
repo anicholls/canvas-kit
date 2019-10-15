@@ -8,7 +8,7 @@ import ReactDOM from 'react-dom';
 import 'storybook-chromatic';
 
 import {commonColors, typeColors, fontFamily} from '../modules/core/react';
-import {InputProviderDecorator, FontsDecorator} from '../utils/storybook';
+import {FontsDecorator, CanvasProviderDecorator} from '../utils/storybook';
 const req = require.context('../modules', true, /stories.*\.tsx?$/);
 
 function loadStories() {
@@ -16,8 +16,8 @@ function loadStories() {
 }
 
 addDecorator(withKnobs);
-addDecorator(InputProviderDecorator);
 addDecorator(FontsDecorator);
+addDecorator(CanvasProviderDecorator);
 
 addParameters({
   options: {
